@@ -225,7 +225,7 @@ export default function InclusiveWorkplaces() {
       const fetchProgress = async () => {
         try {
           const token = localStorage.getItem('token');
-          const response = await fetch('https://ekaant.onrender.com/api/challengeprogresstracking?challengeType=inclusiveWorkplaces', {
+          const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/challengeprogresstracking?challengeType=inclusiveWorkplaces', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -366,7 +366,7 @@ export default function InclusiveWorkplaces() {
     const markActivityComplete = async (dayIndex, activityIndex) => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://ekaant.onrender.com/api/challengeprogresstracking/update', {
+        const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/challengeprogresstracking/update', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -395,7 +395,7 @@ export default function InclusiveWorkplaces() {
             // Unlock next day
             const nextDayIndex = dayIndex + 1;
             if (!unlockedDays.includes(nextDayIndex)) {
-              const unlockResponse = await fetch('https://ekaant.onrender.com/api/challengeprogresstracking/unlockday', {
+              const unlockResponse = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/challengeprogresstracking/unlockday', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -466,7 +466,7 @@ export default function InclusiveWorkplaces() {
                 updateWatchTimeStatistics('challenges', 1);
                 watchedSeconds = 0;
                 // Update database with progress
-                fetch('https://ekaant.onrender.com/api/linechart/update', {
+                fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/linechart/update', {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json',

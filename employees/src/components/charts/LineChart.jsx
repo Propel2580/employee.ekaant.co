@@ -271,7 +271,7 @@ export const startVideoTimeTracking = (category, videoElement, programType = nul
       if (category === 'program' && programType) {
         // Update program progress in MongoDB
         const token = localStorage.getItem('token');
-        await fetch('/api/programtracker/update', {
+        await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/programtracker/update', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -320,7 +320,7 @@ export const updateWatchTimeStatisticsSimple = async (category) => {
   try {
     // Use MongoDB for challenges category
     if (category === 'challenges') {
-      await fetch('https://ekaant.onrender.com/api/linechart/update/challenges', {
+      await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/linechart/update/challenges', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -332,7 +332,7 @@ export const updateWatchTimeStatisticsSimple = async (category) => {
         })
       });
     } else {
-      await fetch('https://ekaant.onrender.com/api/linechart/update', {
+      await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/linechart/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -365,7 +365,7 @@ export const updateWatchTimeStatisticsDuration = async (category, startTime, end
     let durationMinutes = (endHour - startHour) * 60 + (endMinute - startMinute);
     if (durationMinutes < 0) durationMinutes += 24 * 60;
 
-    await fetch('https://ekaant.onrender.com/api/linechart/update', {
+    await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/linechart/update', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

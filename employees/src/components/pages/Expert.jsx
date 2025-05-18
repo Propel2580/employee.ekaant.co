@@ -228,7 +228,7 @@
 //         }
 
 //         setIsLoading(true);
-//         const response = await axios.get("https://ekaant.onrender.com/api/employee/profile", {
+//         const response = await axios.get("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/employee/profile", {
 //           headers: {
 //             Authorization: `Bearer ${token}`,
 //           },
@@ -1361,7 +1361,7 @@ const [showAllSessions, setShowAllSessions] = useState(false);
         }
 
         setIsLoading(true);
-        const response = await axios.get("https://ekaant.onrender.com/api/employee/profile", {
+        const response = await axios.get("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/employee/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -1398,7 +1398,7 @@ const [showAllSessions, setShowAllSessions] = useState(false);
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `https://ekaant.onrender.com/api/expert-session/employee/${employeeEmail}`,
+          `https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/expert-session/employee/${employeeEmail}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -1435,7 +1435,7 @@ const SESSION_COST = 100;
 
         // Check if slot is already booked
         const checkResponse = await axios.get(
-            `https://ekaant.onrender.com/api/expert-session/check-availability/${selectedExpert.email}/${selectedDate}/${selectedStartTime}`,
+            `https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/expert-session/check-availability/${selectedExpert.email}/${selectedDate}/${selectedStartTime}`,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -1518,7 +1518,7 @@ const SESSION_COST = 100;
 
         const token = localStorage.getItem("token");
         const response = await axios.post(
-            "https://ekaant.onrender.com/api/expert-session/book",
+            "https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/expert-session/book",
             requestBody,
             { 
               headers: { 
@@ -1554,7 +1554,7 @@ const SESSION_COST = 100;
 
         try {
             await axios.post(
-                "https://ekaant.onrender.com/api/notifications",
+                "https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/notifications",
                 notificationData,
                 {
                     headers: {
@@ -1575,7 +1575,7 @@ const SESSION_COST = 100;
             throw new Error('No authentication token found');
           }
 
-          const response = await fetch('https://ekaant.onrender.com/api/barchart/update', {
+          const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/barchart/update', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -1606,7 +1606,7 @@ const SESSION_COST = 100;
         // Update MongoDB LineChart
         try {
           const token = localStorage.getItem("token");
-          await fetch('https://ekaant.onrender.com/api/linechart/update', {
+          await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/linechart/update', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -1660,7 +1660,7 @@ const SESSION_COST = 100;
       }
 
       const response = await axios.post(
-        `https://ekaant.onrender.com/api/expert-session/cancel/${employeeEmail}`,
+        `https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/expert-session/cancel/${employeeEmail}`,
         { 
           expertEmail,
           sessionDate,
@@ -1694,7 +1694,7 @@ const SESSION_COST = 100;
               throw new Error('No authentication token found');
             }
 
-            const response = await fetch('https://ekaant.onrender.com/api/barchart/update', {
+            const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/barchart/update', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -1732,7 +1732,7 @@ const SESSION_COST = 100;
             // Update MongoDB LineChart
             try {
               const token = localStorage.getItem("token");
-              await fetch('https://ekaant.onrender.com/api/linechart/update', {
+              await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/linechart/update', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
@@ -1765,7 +1765,7 @@ const SESSION_COST = 100;
             };
 
             await axios.post(
-              "https://ekaant.onrender.com/api/notifications",
+              "https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/notifications",
               notificationData,
               {
                 headers: {
