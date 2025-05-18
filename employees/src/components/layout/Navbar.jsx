@@ -19,7 +19,7 @@ const Navbar = () => {
       if (!token) return;
 
       const response = await axios.get(
-        "https://ekaant.onrender.com/api/notifications",
+        "https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/notifications",
         {
           headers: { 
             Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ const Navbar = () => {
         return;
       }
   
-      const response = await axios.get("https://ekaant.onrender.com/api/employee/profile", {
+      const response = await axios.get("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/employee/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -114,7 +114,7 @@ const Navbar = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `https://ekaant.onrender.com/api/notifications/read/${notificationId}`,
+        `https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/notifications/read/${notificationId}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` }

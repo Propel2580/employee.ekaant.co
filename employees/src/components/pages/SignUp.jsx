@@ -115,7 +115,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("https://ekaant.onrender.com/api/sign-up", formData);
+      await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/sign-up", formData);
       setOtpSent(true);
       setTimeout(() => setOtpSent(false), 3000);
       setStep(2);
@@ -130,7 +130,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("https://ekaant.onrender.com/api/verify-otp", {
+      const response = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/verify-otp", {
         email: formData.email,
         otp: formData.otp,
       });
@@ -160,7 +160,7 @@ const Signup = () => {
     }
     setLoading(true);
     try {
-      const res = await axios.post("https://ekaant.onrender.com/api/set-password", {
+      const res = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/set-password", {
         email: formData.email,
         password: formData.password
       });
