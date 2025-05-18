@@ -24,7 +24,7 @@ const defaultLevels = [
   { name: "Mindfulness", icon: "🧘" },
   { name: "Healthy Habits", icon: "🍏" },
   { name: "Emotional Intelligence", icon: "🧠" },
-  { name: "Resilience Training", icon: "🏋️" },
+  { name: "Resilience ", icon: "🏋️" },
   { name: "Final Assessment", icon: "🎓" },
 ];
 
