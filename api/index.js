@@ -185,12 +185,12 @@ app.use('/uploads', express.static('uploads'));
 app.use((req, res, next) => {
   console.log(`Incoming Request: ${req.method} ${req.url}`);
   console.log("Request Headers:", req.headers);
-  
+
   // Skip body check for multipart/form-data requests
   if (req.headers['content-type']?.includes('multipart/form-data')) {
     return next();
   }
-  
+
   // Check JSON body for other requests
   if (req.method === "POST" && req.headers['content-type']?.includes('application/json')) {
     if (!req.body || Object.keys(req.body).length === 0) {
@@ -249,18 +249,20 @@ app.use("/api", programTrackerRouter); // Routes will be available at /api/progr
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join(__dirname, "../client/dist/index.html"));
 // });
-// Serve static files with proper content types
+// Serve static files with proper MIME types
 app.use(express.static(path.join(__dirname, '/employees/dist'), {
-  setHeaders: (res, path) => {
-    if (path.endsWith('.js')) {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.js')) {
       res.setHeader('Content-Type', 'application/javascript');
-    } else if (path.endsWith('.css')) {
+    } else if (filePath.endsWith('.mjs')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    } else if (filePath.endsWith('.css')) {
       res.setHeader('Content-Type', 'text/css');
     }
   }
 }));
 
-// Handle all other routes by serving index.html
+// Handle all other routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'employees', 'dist', 'index.html'));
 });
