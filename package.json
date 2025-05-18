@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon api/index.js",
-  "start": "serve -s dist",
-  "build": "vite build"
+    "start": "node api/index.js",
+    "build": "npm install && npm install --prefix employees && npm run build --prefix employees"
   },
   "keywords": [],
   "author": "",
