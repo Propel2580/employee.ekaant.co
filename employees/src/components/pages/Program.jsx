@@ -20,7 +20,7 @@ import CloseIcon from '@mui/icons-material/Close';
 const defaultLevels = [
   { name: "Introduction", icon: "🔥" },
   { name: "Stress Management", icon: "💆‍♂️" },
-  { name: "Work-Life Balance", icon: "⚖️" },
+  { name: " Balance", icon: "⚖️" },
   { name: "Mindfulness", icon: "🧘" },
   { name: "Healthy Habits", icon: "🍏" },
   { name: "Emotional Intelligence", icon: "🧠" },
