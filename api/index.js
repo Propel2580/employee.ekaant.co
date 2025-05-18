@@ -262,9 +262,16 @@ app.use(express.static(path.join(__dirname, '/employees/dist'), {
   }
 }));
 
-// Handle all other routes
+// Serve static files before the catch-all route
+app.use(express.static(path.join(__dirname, 'employees/dist')));
+
+// Handle all other routes by serving index.html
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'employees', 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'employees/dist/index.html'), (err) => {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
 });
 
 app.use((err, req, res, next) => {
