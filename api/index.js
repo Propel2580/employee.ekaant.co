@@ -202,7 +202,7 @@ app.use((req, res, next) => {
 
 // Configure CORS before other middleware (This duplicate line was removed)
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://0.0.0.0:3000', 'https://ekaant.onrender.com'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://0.0.0.0:3000', 'https://ekaant.onrender.com','https://ekaant.onrender.com','https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
@@ -252,13 +252,17 @@ app.use("/api", programTrackerRouter); // Routes will be available at /api/progr
 // Serve static files with proper MIME types
 app.use(express.static(path.join(__dirname, '/employees/dist'), {
   setHeaders: (res, filePath) => {
-    if (filePath.endsWith('.js')) {
-      res.setHeader('Content-Type', 'application/javascript');
-    } else if (filePath.endsWith('.mjs')) {
-      res.setHeader('Content-Type', 'application/javascript');
+    if (filePath.endsWith('.js') || filePath.endsWith('.mjs')) {
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+    } else if (filePath.endsWith('.jsx')) {
+      res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
     } else if (filePath.endsWith('.css')) {
-      res.setHeader('Content-Type', 'text/css');
+      res.setHeader('Content-Type', 'text/css; charset=utf-8');
     }
+    // Enable CORS headers for all static files
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   }
 }));
 
