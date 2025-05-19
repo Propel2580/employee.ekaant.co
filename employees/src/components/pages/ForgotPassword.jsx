@@ -101,7 +101,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const res = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/send-otp-reset", { email }, { withCredentials: true });
+      const res = await axios.post("https://employee.ekaant.co/api/send-otp-reset", { email }, { withCredentials: true });
       setMessage(res.data.message);
       setStep(2);
     } catch (err) {
@@ -120,7 +120,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const res = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/verify-otp-reset", { email, otp }, { withCredentials: true });
+      const res = await axios.post("https://employee.ekaant.co/api/verify-otp-reset", { email, otp }, { withCredentials: true });
       setMessage(res.data.message);
       setStep(3);
     } catch (err) {
@@ -139,7 +139,7 @@ const ForgotPassword = () => {
     }
 
     try {
-      const res = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/reset-password", { email, newPassword }, { withCredentials: true });
+      const res = await axios.post("https://employee.ekaant.co/api/reset-password", { email, newPassword }, { withCredentials: true });
       setMessage(res.data.message);
       navigate("/sign-in");
     } catch (err) {

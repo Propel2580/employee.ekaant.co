@@ -24,7 +24,7 @@ export const CreditsProvider = ({ children }) => {
         return;
       }
 
-      const response = await axios.get('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/profile', {
+      const response = await axios.get('https://employee.ekaant.co/api/profile', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -56,7 +56,7 @@ export const CreditsProvider = ({ children }) => {
       if (!token) throw new Error('No authentication token found');
 
       const response = await axios.post(
-        'https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/update-credits',
+        'https://employee.ekaant.co/api/update-credits',
         { credits: newAmount, operation },
         { headers: { Authorization: `Bearer ${token}` }}
       );

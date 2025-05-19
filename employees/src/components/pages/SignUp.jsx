@@ -115,7 +115,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/sign-up", formData);
+      await axios.post("https://employee.ekaant.co/api/sign-up", formData);
       setOtpSent(true);
       setTimeout(() => setOtpSent(false), 3000);
       setStep(2);
@@ -130,7 +130,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/verify-otp", {
+      const response = await axios.post("https://employee.ekaant.co/api/verify-otp", {
         email: formData.email,
         otp: formData.otp,
       });
@@ -160,7 +160,7 @@ const Signup = () => {
     }
     setLoading(true);
     try {
-      const res = await axios.post("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/set-password", {
+      const res = await axios.post("https://employee.ekaant.co/api/set-password", {
         email: formData.email,
         password: formData.password
       });
@@ -339,17 +339,46 @@ const Signup = () => {
                   required
                 />
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Department</label>
-                <input
-                  type="text"
-                  name="department"
-                  placeholder="Enter Department"
-                  onChange={handleChange}
-                  className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
-                  required
-                />
-              </div>
+          
+<div>
+  <label className="block text-sm font-medium text-gray-700 mb-2">Department</label>
+  <div className="relative ">
+    <input
+      type="text"
+      name="department"
+      list="departments"
+      placeholder="Enter or select your department"
+      onChange={handleChange}
+      className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
+      required
+    />
+    <datalist id="departments">
+      <option value="Engineering">Engineering</option>
+      <option value="Product Management">Product Management</option>
+      <option value="Design">Design</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Sales">Sales</option>
+      <option value="Human Resources">Human Resources</option>
+      <option value="Finance">Finance</option>
+      <option value="CEO">CEO</option>
+      <option value="Founder">Founder</option>
+      <option value="Operations">Operations</option>
+      <option value="Customer Support">Customer Support</option>
+      <option value="Quality Assurance">Quality Assurance</option>
+      <option value="Research & Development">Research & Development</option>
+      <option value="Information Technology">Information Technology</option>
+      <option value="Business Development">Business Development</option>
+      <option value="Content">Content</option>
+      <option value="Legal">Legal</option>
+    <option value="CEO & Founder">CEO & Founder</option>
+      <option value="Administration">Administration</option>
+      <option value="Data Science">Data Science</option>
+      <option value="Artificial Intelligence">Artificial Intelligence</option>
+      <option value="Cloud Computing">Cloud Computing</option>
+      <option value="Cybersecurity">Cybersecurity</option>
+    </datalist>
+  </div>
+</div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2"> Current Role</label>
                 <input

@@ -104,7 +104,7 @@ const ProfileModal = ({ open, onClose, profileData, setProfileData }) => {
       };
 
       const response = await axios.post(
-        "https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/employee/upload-avatar",
+        "https://employee.ekaant.co/api/employee/upload-avatar",
         formData,
         config
       );
@@ -159,7 +159,7 @@ const ProfileModal = ({ open, onClose, profileData, setProfileData }) => {
       console.log("Sending update with data:", updateData);
 
       const response = await axios.put(
-        `https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/employee/update/${profileData._id}`,
+        `https://employee.ekaant.co/api/employee/update/${profileData._id}`,
         updateData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -33,7 +33,7 @@ let PORT = process.env.PORT || 3000;
 
 // Configure CORS before other middleware
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://0.0.0.0:3000', 'https://ekaant.onrender.com','https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://0.0.0.0:3000', 'https://ekaant.onrender.com','https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run','https://employee.ekaant.co'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
@@ -64,7 +64,7 @@ app.use((req, res, next) => {
 
 // Configure CORS before other middleware (This duplicate line was removed)
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://0.0.0.0:3000', 'https://ekaant.onrender.com','https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run'],
+  origin: ['http://localhost:5173', 'http://localhost:3000', 'http://0.0.0.0:3000', 'https://ekaant.onrender.com','https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run','https://employee.ekaant.co'],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],

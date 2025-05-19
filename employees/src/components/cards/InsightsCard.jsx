@@ -16,7 +16,7 @@ const InsightsCard = () => {
         const token = localStorage.getItem("token");
         if (!token) return;
 
-        const response = await fetch("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/insights/last-submission", {
+        const response = await fetch("https://employee.ekaant.co/api/insights/last-submission", {
           headers: {
             "Authorization": `Bearer ${token}`
           }
@@ -131,7 +131,7 @@ const InsightsCard = () => {
         return;
       }
 
-      const response = await fetch("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/insights/submit", {
+      const response = await fetch("https://employee.ekaant.co/api/insights/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

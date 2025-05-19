@@ -85,7 +85,7 @@ const CustomBarChart = () => {
         setData([...initialData]);
 
         // Fetch bar chart data directly (no need to filter, backend handles it)
-        const chartResponse = await fetch(`https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/barchart`, {
+        const chartResponse = await fetch(`https://employee.ekaant.co/api/barchart`, {
           headers: {
             'Authorization': `Bearer ${token}`,
             'Content-Type': 'application/json'

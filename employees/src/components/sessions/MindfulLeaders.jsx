@@ -13,7 +13,7 @@ const useProgress = (programType) => {
   const fetchProgress = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/programtracker?programType=${programType}`, {
+      const response = await fetch(`https://employee.ekaant.co/api/programtracker?programType=${programType}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -32,7 +32,7 @@ const useProgress = (programType) => {
   const updateProgress = async (dayIndex, activityIndex, completed) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/programtracker/update', {
+      const response = await fetch('https://employee.ekaant.co/api/programtracker/update', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ const useProgress = (programType) => {
   const unlockLevel = async (level) => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/programtracker/unlocklevel', {
+      const response = await fetch('https://employee.ekaant.co/api/programtracker/unlocklevel', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ const MindfulLeaders = () => {
     const fetchProgress = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/programtracker?programType=mindfulLeaders', {
+        const response = await fetch('https://employee.ekaant.co/api/programtracker?programType=mindfulLeaders', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -187,7 +187,7 @@ const MindfulLeaders = () => {
     const updateProgress = async () => {
       try {
         const token = localStorage.getItem('token');
-        await fetch('https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/programtracker/update', {
+        await fetch('https://employee.ekaant.co/api/programtracker/update', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

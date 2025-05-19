@@ -30,7 +30,7 @@ const Dashboard = () => {
           throw new Error("User not authenticated");
         }
 
-        const res = await axios.get("https://employee-ekaant-co-9005-4d9445b1-wtjycodr.onporter.run/api/employee/profile", {
+        const res = await axios.get("https://employee.ekaant.co/api/employee/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
