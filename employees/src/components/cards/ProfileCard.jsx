@@ -107,7 +107,7 @@ const ProfileCard = () => {
 
     const quoteInterval = setInterval(() => {
       setCurrentQuote(prev => (prev + 1) % quotes.length);
-    }, 10000);
+    }, 8000);
 
     window.addEventListener('profileDataChanged', handleProfileChange);
 
