@@ -1,10 +1,47 @@
-
 import { useState, useRef, useEffect } from "react";
 import axios from 'axios';
 
 const ProfileCard = () => {
   const [profileData, setProfileData] = useState({});
+  const [currentQuote, setCurrentQuote] = useState(0);
   const fileInputRef = useRef(null);
+
+  const quotes = [
+    "The best time to plant a tree was 10 years ago\nthe second best time is ... now",
+    "Success is not final, failure is not fatal:\nit is the courage to continue that counts",
+    "Your time is limited, don't waste it\nliving someone else's life",
+    "The future belongs to those who\nbelieve in the beauty of their dreams",
+    "It does not matter how slowly you go\nas long as you do not stop",
+    "Everything you've ever wanted is on\nthe other side of fear",
+    "Success usually comes to those who are\ntoo busy to be looking for it",
+    "The only way to do great work is\nto love what you do",
+    "If you want to lift yourself up,\nlift up someone else",
+    "The journey of a thousand miles\nbegins with one step",
+    "Don't watch the clock; do what it does.\nKeep going",
+    "The only limit to our realization of tomorrow\nwill be our doubts of today",
+    "Life is what happens when you're\nbusy making other plans",
+    "The harder you work for something,\nthe greater you'll feel when you achieve it",
+    "Do what you can, with what you have,\nwhere you are",
+    "Mental health is not a destination\nbut a process",
+    "Your peace is more important than\ndriving yourself crazy trying to understand why something happened",
+    "Self-care is not selfish\nit's essential",
+    "You don't have to control your thoughts\njust stop letting them control you",
+    "Recovery is not one and done\nit happens in layers",
+    "Healing doesn't mean the damage never existed\nit means it no longer controls our lives",
+    "Sometimes the strongest thing you can do\nis ask for help",
+    "Your mental health is a priority\nyour personal growth is an investment",
+    "Take care of your mind\nit's the only place you have to live",
+    "Small steps every day\nlead to big changes"
+  ];
+
+  // Function to shuffle array
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
 
   const fetchProfileData = async () => {
     try {
@@ -68,10 +105,15 @@ const ProfileCard = () => {
       fetchProfileData();
     };
 
+    const quoteInterval = setInterval(() => {
+      setCurrentQuote(prev => (prev + 1) % quotes.length);
+    }, 10000);
+
     window.addEventListener('profileDataChanged', handleProfileChange);
-    
+
     return () => {
       window.removeEventListener('profileDataChanged', handleProfileChange);
+      clearInterval(quoteInterval);
     };
   }, []);
 
@@ -109,9 +151,12 @@ const ProfileCard = () => {
           </p>
 
           <p className="text-white text-xl italic font-semibold">
-            "The best time to plant a tree was 10 years ago
-            <br />
-            the second best time is ... now"
+            "{quotes[currentQuote].split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i === 0 && <br />}
+              </span>
+            ))}"
           </p>
         </div>
       </div>
