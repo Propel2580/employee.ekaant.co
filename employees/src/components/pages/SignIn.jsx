@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
@@ -143,9 +142,9 @@ const SignIn = () => {
       {/* Right Section */}
       <div className="w-1/2 p-12 flex flex-col justify-center items-center">
         <div className="w-full max-w-md">
-          <div className="flex items-center mb-12">
-            <img src="/logo-03.png" alt="Ekaant" className="h-16" />
-            <span className="text-4xl font-bold ml-2">EKAANT</span>
+          <div className="flex  space-x-4 mb-12">
+            <img src="/masterlogo.png" alt="Master Logo" className="h-16" />
+            <img src="/tatrlogo.png" alt="Tatr Logo" className="h-20" />
           </div>
 
           <div className="flex mb-8">
@@ -157,7 +156,10 @@ const SignIn = () => {
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <div className="flex justify-between items-center mb-2">
+                <label className="block text-sm font-medium text-gray-700">Email</label>
+
+              </div>
               <input
                 type="email"
                 name="email"
@@ -168,7 +170,12 @@ const SignIn = () => {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
+              <div className="flex justify-between items-center mb-2">
+                <label className="block text-sm font-medium text-gray-700">Password</label>
+                <Link to="/forgot-password" className="text-sm text-blue-600 hover:text-blue-800 hover:underline">
+                  Forgot Password?
+                </Link>
+              </div>
               <input
                 type={formData.showPassword ? "text" : "password"}
                 name="password"

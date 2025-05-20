@@ -334,10 +334,9 @@ const Sidebar = () => {
           }}
         />
       ))}
-
            <div className="flex items-center justify-center gap-2 mb-6 py-4">
-        <img src="\logo-03.png" alt="Ekaant Logo" className="h-12 w-12" />
-        <div className="text-3xl text-white">EKAANT</div>
+        <img src="\logo-03.png" alt="Ekaant Logo" className="h-12 w-12 mb-6" />
+        <div className=" text-white text-4xl font-bold ml-4">EKAANT</div>
       </div>
       <div className="flex-2 bg-black/30 backdrop-blur-sm p-4 rounded-tr-[40px] rounded-tl-[40px] mt-6 py-4 px-4">
         <nav>

@@ -1,4 +1,3 @@
-
 import { useState ,useEffect } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
@@ -213,9 +212,9 @@ const ForgotPassword = () => {
       {/* Right Section */}
       <div className="w-1/2 p-12 flex flex-col justify-center items-center">
         <div className="w-full max-w-md">
-          <div className="flex items-center mb-12">
-            <img src="/logo-03.png" alt="Ekaant" className="h-16" />
-            <span className="text-4xl font-bold ml-2">EKAANT</span>
+          <div className="flex space-x-4 mb-12">
+            <img src="/masterlogo.png" alt="Master Logo" className="h-16" />
+            <img src="/tatrlogo.png" alt="Tatr Logo" className="h-20" />
           </div>
 
           <div className="bg-white/40 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-lg">
