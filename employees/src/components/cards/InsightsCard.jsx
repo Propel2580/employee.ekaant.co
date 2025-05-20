@@ -157,19 +157,11 @@ const InsightsCard = () => {
         throw new Error("Failed to submit insights");
       }
 
-      await response.json(); // Wait for response to be processed
       setIsSubmitted(true);
-      handleCloseSurvey(); // Close the survey after submission
     } catch (error) {
       console.error("Error submitting insights:", error);
       alert("Failed to submit insights. Please try again.");
     }
-  };
-
-  const handleCloseSurvey = () => {
-    setIsSurveyOpen(false);
-    setCurrentQuestion(-1);
-    setAnswers(Array(10).fill({ selectedOption: "", customAnswer: "" }));
   };
 
   // Check if the current question has been answered
