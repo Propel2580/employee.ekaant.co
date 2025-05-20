@@ -128,10 +128,10 @@
 //       id: 1,
 //       title: "Stress Management ",
 //       credits: 100,
-//       image: "https://recruitment.growmo.re/wp-content/uploads/2022/09/7-how-to-prevent-burnout.jpg",
+//       image: "/image1.png",
 //       expert: {
 //         name: "Dr. Shweta Sharma",
-//         photo: "https://tse4.mm.bing.net/th?id=OIP.VFVFnOHFUcnYKkiE58CIIQHaHa&pid=Api&P=0&h=180",
+//         photo: "/doc1.png",
 //         specialization: "Expert in stress and Anxiety",
 //         rating: 4.8,
 //         sessions: 520,
@@ -160,10 +160,10 @@
 //         id: 2,
 //         title: "Mindfulness at Work",
 //         credits: 100,
-//         image: "https://tse3.mm.bing.net/th?id=OIP.7iFU_lcul3qC31HHEHbEdgHaHa&pid=Api&P=0&h=180",
+//         image: "/image2.png",
 //         expert: {
 //           name: "Saumya Sharan",
-//           photo: "https://i2.wp.com/www.americanbazaaronline.com/wp-content/uploads/2014/12/Mahira-Khan.jpg",
+//           photo: "/doc1.png",
 //           specialization: "Expert in Mindfulness Quality",
 //           rating: 4.9,
 //           sessions: 480,
@@ -194,10 +194,10 @@
 //       id: 3,
 //       title: "Overcoming Sleep Struggles",
 //       credits: 100,
-//       image: "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg",
+//       image: "/image3.png",
 //       expert: {
 //         name: "Shweta Sharma",
-//         photo: "https://randomuser.me/api/portraits/women/44.jpg",
+//         photo: "/doc1.png",
 //         specialization: "Science of Sleep",
 //         rating: 4.9,
 //         sessions: 650,
@@ -226,10 +226,10 @@
 //       id: 4,
 //       title: "Yoga for a Healthy Body & Mind ",
 //       credits: 100,
-//       image: "https://images.pexels.com/photos/1181605/pexels-photo-1181605.jpeg",
+//       image: "/image4.png",
 //       expert: {
 //         name: "Kritika Mahajan",
-//         photo: "https://randomuser.me/api/portraits/men/32.jpg",
+//         photo: "/doc1.png",
 //         specialization: "yoga and mental wellness",
 //         rating: 4.7,
 //         sessions: 320,
@@ -980,7 +980,7 @@
 //           value={searchTerm}
 //           onChange={(e) => setSearchTerm(e.target.value)}
 //           sx={{ flexGrow: 1 }}
-//         />
+//                 />
 //         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
 //           <FormControl sx={{ minWidth: 150 }}>
 //             <InputLabel>Filter by Topic</InputLabel>
@@ -1069,7 +1069,15 @@
 //                       <img
 //                         src={session.image}
 //                         alt={session.title}
-//                         style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px" }}
+//                         style={{ 
+//                           width: "100%", 
+//                           height: "auto",
+//                           minHeight: "240px",
+//                           maxHeight: "280px",
+//                           objectFit: "contain",
+//                           borderRadius: "8px",
+//                           background: "#f5f5f5"
+//                         }}
 //                       />
 
 //                       <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mt: 2, mb: 1 }}>
@@ -1543,7 +1551,9 @@ const LiveSession = () => {
     return saved ? JSON.parse(saved) : [];
   });
   const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);
-  const { credits, updateCredits } = useCredits(); 
+  const { credits, updateCredits } = useCredits();
+  const [descriptionDialog, setDescriptionDialog] = useState(false);
+  const [selectedDescription, setSelectedDescription] = useState("");
 
   useEffect(() => {
     if (employeeEmail) {
@@ -1613,9 +1623,12 @@ const LiveSession = () => {
   const sessions = [
     {
       id: 1,
-      title: "Stress Management ",
+      title: "Stress Management",
       credits: 100,
       image: "/image1.png",
+      fullDescription: "In today's fast-paced work environment, stress isn't just common — it's constant. But what if you could manage it before it manages you? Join psychologist Shweta Sharma in this interactive session where she will help you understand the science of stress, identify hidden triggers, and walk you through simple yet powerful techniques to stay calm and focused — even on the busiest days. From breathwork to mindset shifts, this session offers practical tools to build emotional resilience and reclaim control. Let's turn stress into strength — together!",
+      description: "Learn effective techniques to manage workplace stress and prevent burnout.",
+      topics: ["Stress Management", "Work-Life Balance"],
       expert: {
         name: "Dr. Shweta Sharma",
         photo: "/doc1.png",
@@ -1640,14 +1653,15 @@ const LiveSession = () => {
           }
         ]
       },
-      description: "Learn effective techniques to manage workplace stress and prevent burnout.",
-      topics: ["Stress Management", "Work-Life Balance"],
     },
         {
         id: 2,
         title: "Mindfulness at Work",
         credits: 100,
         image: "/image2.png",
+        fullDescription: "Ever find your mind racing even while you're sitting still at your desk? You're not alone. In this session, psychologist Shweta Sharma will guide you through the practice of mindfulness at work — a science-backed approach to staying present, focused, and calm even during the busiest hours. Through simple exercises and relatable examples, you'll learn how to manage distractions, respond (not react) to pressure, build emotional clarity, and reconnect with your goals — without the burnout. This is not about sitting in silence — it's about learning to thrive in chaos by grounding yourself in the present moment.",
+        description: "Expert guidance on managing daily stress and improving mental health.",
+        topics: ["clam", "clarity", "Mindfullness"],
         expert: {
           name: "Saumya Sharan",
           photo: "/doc1.png",
@@ -1673,8 +1687,6 @@ const LiveSession = () => {
             },
           ],
         },
-        description: "Expert guidance on managing daily stress and improving mental health.",
-        topics: ["clam", "clarity", "Mindfullness"],
       },
 
     {
@@ -1682,7 +1694,10 @@ const LiveSession = () => {
       title: "Overcoming Sleep Struggles",
       credits: 100,
       image: "/image3.png",
-      expert: {
+      fullDescription: "Tired of feeling tired? You're not alone. Poor sleep affects your mood, productivity, and mental health — but fixing it doesn't always mean counting sheep. In this eye-opening session, psychologist Shweta Sharma will help you understand the science of sleep and share practical tools to beat insomnia, racing thoughts, and nighttime restlessness. You'll learn how to create a calm bedtime routine, stop your brain from 'overthinking' at night, improve sleep quality without meds, and wake up refreshed — not just awake. This is your chance to finally give sleep the attention it deserves — because rest is not a luxury, it's a necessity.",
+      description: "Learn mindfulness techniques for better focus and inner peace.",
+      topics: ["Meditation", "Mindfulness", "overthinking"],
+       expert: {
         name: "Shweta Sharma",
         photo: "/doc1.png",
         specialization: "Science of Sleep",
@@ -1706,14 +1721,15 @@ const LiveSession = () => {
           }
         ]
       },
-      description: "Learn mindfulness techniques for better focus and inner peace.",
-      topics: ["Meditation", "Mindfulness", "overthinking"],
     },
     {
       id: 4,
-      title: "Yoga for a Healthy Body & Mind ",
+      title: "Yoga for a Healthy Body & Mind",
       credits: 100,
       image: "/image4.png",
+      fullDescription: "Need a breather — mentally and physically? Join us for a refreshing session that blends yoga and mental wellness, guided by psychologist and yoga teacher Shweta Sharma. This isn't just about stretching — it's about reconnecting with yourself. Through gentle postures, breathwork, and mindfulness techniques, you'll learn how to relieve stress and physical tension, improve focus and emotional balance, boost energy and flexibility — without fancy moves, and cultivate a stronger mind-body connection. No prior experience required — just bring yourself and a willingness to reset.",
+      description: "Strategic planning for career advancement and professional growth.",
+      topics: ["Breathwork", "Mindfulness Techniques", "Gentle Postures"],
       expert: {
         name: "Kritika Mahajan",
         photo: "/doc1.png",
@@ -1732,8 +1748,6 @@ const LiveSession = () => {
           },
         ],
       },
-      description: "Strategic planning for career advancement and professional growth.",
-      topics: ["Breathwork", "Mindfulness Techniques", "Gentle Postures"],
     },
  
   ];
@@ -2514,7 +2528,7 @@ const LiveSession = () => {
         {showBookmarksOnly && ` (Bookmarked: ${bookmarkedSessions.length})`}
       </Typography>
 
-      <Grid container spacing={4} sx={{ maxWidth: '1200px', margin: '0 auto' }}>
+      <Grid container spacing={4}>
         {isLoading ? (
           Array.from(new Array(4)).map((_, index) => (
             <Grid item xs={12} md={6} key={`skeleton-${index}`}>
@@ -2551,25 +2565,19 @@ const LiveSession = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <Card sx={{ 
-                    height: 'auto', 
-                    display: 'flex', 
-                    flexDirection: 'column',
-                    maxWidth: '500px',
-                    margin: '0 auto',
-                    border: '1px solid #e0e0e0'
-                  }}>
-                    <CardContent sx={{ flex: 1, p: 3 }}>
+                  <Card>
+                    <CardContent>
                       <img
                         src={session.image}
                         alt={session.title}
                         style={{ 
                           width: "100%", 
-                          height: "260px",
+                          height: "auto",
+                          minHeight: "240px",
+                          maxHeight: "280px",
                           objectFit: "contain",
                           borderRadius: "8px",
-                          background: "#f5f5f5",
-                          marginBottom: "16px"
+                          background: "#f5f5f5"
                         }}
                       />
 
@@ -2590,9 +2598,14 @@ const LiveSession = () => {
 
                       <Box sx={{ display: "flex", alignItems: "center", mb: 4 }}>
                         <Chip
-                          label={`${session.credits} credits`}
+                          label="About Session"
                           color="primary"
                           size="small"
+                          onClick={() => {
+                            setSelectedDescription(session.fullDescription);
+                            setDescriptionDialog(true);
+                          }}
+                          style={{ cursor: 'pointer' }}
                         />
 
                       </Box>
@@ -2900,115 +2913,19 @@ const LiveSession = () => {
                 </Box>
               )}
 
-              {/* About Session Button */}
-              <Box sx={{ mb: 4 }}>
-                <Button
-                  variant="outlined"
-                  fullWidth
-                  onClick={() => {
-                    const sessionDetails = {
-                      "Stress Management": {
-                        description: "In today's fast-paced work environment, stress isn't just common — it's constant. But what if you could manage it before it manages you? Join psychologist Shweta Sharma in this interactive session where she will help you understand the science of stress, identify hidden triggers, and walk you through simple yet powerful techniques to stay calm and focused — even on the busiest days. From breathwork to mindset shifts, this session offers practical tools to build emotional resilience and reclaim control. Let's turn stress into strength — together!",
-                        expert: "Dr. Shweta Sharma",
-                        role: "Psychologist"
-                      },
-                      "Mindfulness at Work": {
-                        description: "Ever find your mind racing even while you're sitting still at your desk? You're not alone. In this session, psychologist Shweta Sharma will guide you through the practice of mindfulness at work — a science-backed approach to staying present, focused, and calm even during the busiest hours. Through simple exercises and relatable examples, you'll learn how to: ✔️ Manage distractions ✔️ Respond (not react) to pressure ✔️ Build emotional clarity ✔️ Reconnect with your goals — without the burnout",
-                        expert: "Saumya Sharan",
-                        role: "Psychologist"
-                      },
-                      "Overcoming Sleep Struggles": {
-                        description: "Tired of feeling tired? You're not alone. Poor sleep affects your mood, productivity, and mental health — but fixing it doesn't always mean counting sheep. In this eye-opening session, psychologist Shweta Sharma will help you understand the science of sleep and share practical tools to beat insomnia, racing thoughts, and nighttime restlessness. You'll learn how to: ✔️ Create a calm bedtime routine ✔️ Stop your brain from 'overthinking' at night ✔️ Improve sleep quality without meds ✔️ Wake up refreshed — not just awake",
-                        expert: "Shweta Sharma",
-                        role: "Psychologist"
-                      },
-                      "Yoga for a Healthy Body & Mind": {
-                        description: "Need a breather — mentally and physically? Join us for a refreshing session that blends yoga and mental wellness, guided by psychologist and yoga teacher Shweta Sharma. This isn't just about stretching — it's about reconnecting with yourself. Through gentle postures, breathwork, and mindfulness techniques, you'll learn how to: ✔️ Relieve stress and physical tension ✔️ Improve focus and emotional balance ✔️ Boost energy and flexibility — without fancy moves ✔️ Cultivate a stronger mind-body connection",
-                        expert: "Kritika Mahajan",
-                        role: "Certified Yoga Practitioner"
-                      }
-                    };
-
-                    setOpenDialog(false);
-                    const details = sessionDetails[selectedSession?.title];
-                    if (details) {
-                      const dialogContent = (
-                        <Dialog 
-                          open={true} 
-                          onClose={() => setOpenDialog(true)}
-                          maxWidth="md"
-                          fullWidth
-                        >
-                          <DialogTitle>
-                            <div className="flex justify-between items-center">
-                              <Typography variant="h5">{selectedSession?.title}</Typography>
-                              <IconButton onClick={() => setOpenDialog(true)}>✕</IconButton>
-                            </div>
-                          </DialogTitle>
-                          <DialogContent>
-                            <Box sx={{ mb: 4 }}>
-                              <div className="flex items-center gap-4 mb-4">
-                                <Avatar src={selectedSession?.expert.photo} sx={{ width: 80, height: 80 }} />
-                                <div>
-                                  <Typography variant="h6">{details.expert}</Typography>
-                                  <Typography variant="subtitle1" color="textSecondary">{details.role}</Typography>
-                                  <div className="flex items-center gap-2 mt-1">
-                                    <Chip label={`${selectedSession?.expert.rating} ★`} size="small" color="primary" />
-                                    <Chip label={`${selectedSession?.expert.sessions}+ sessions`} size="small" />
-                                  </div>
-                                </div>
-                              </div>
-                              <Typography variant="body1" sx={{ whiteSpace: 'pre-line', mb: 2 }}>
-                                {details.description}
-                              </Typography>
-                              <Box sx={{ mt: 3, display: 'flex', justifyContent: 'space-between', alignItems: 'center', bgcolor: 'background.paper', p: 2, borderRadius: 1 }}>
-                                <Typography>Credits Required:</Typography>
-                                <Typography variant="h6" color="primary">{selectedSession?.credits}</Typography>
-                              </Box>
-                            </Box>
-                          </DialogContent>
-                          <DialogActions>
-                            <Button onClick={() => setOpenDialog(true)} variant="contained" color="primary">
-                              Back to Booking
-                            </Button>
-                          </DialogActions>
-                        </Dialog>
-                      );
-                      const dialogRoot = document.createElement('div');
-                      dialogRoot.id = 'session-dialog';
-                      document.body.appendChild(dialogRoot);
-                      const root = ReactDOM.createRoot(dialogRoot);
-                      root.render(dialogContent);
-                      
-                      // Cleanup when dialog closes
-                      const cleanup = () => {
-                        root.unmount();
-                        dialogRoot.remove();
-                      };
-                      
-                      // Add cleanup to the Dialog's onClose
-                      dialogContent.props.onClose = () => {
-                        cleanup();
-                        setOpenDialog(true);
-                      };
-                    }
-                  }}
-                  sx={{
-                    py: 2,
-                    borderRadius: 2,
-                    borderWidth: 2,
-                    '&:hover': {
-                      borderWidth: 2,
-                    }
-                  }}
-                >
-                  <Typography variant="button" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    About Session Details
+              {/* Credits Information */}
+              <Box sx={{ mb: 4, p: 3, bgcolor: 'background.paper', borderRadius: 1, boxShadow: 1 }}>
+                <Typography variant="subtitle2" gutterBottom>Session Details:</Typography>
+                <div className="flex justify-between items-center">
+                  <Typography>Credits Required:</Typography>
+                  <Typography variant="h6" color="primary">{selectedSession?.credits}</Typography>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <Typography>Your Credits:</Typography>
+                  <Typography variant="h6" color={credits >= (selectedSession?.credits || 0) ? "success" : "error"}>
+                    {credits}
                   </Typography>
-                </Button>
+                </div>
               </Box>
 
               {/* Action Buttons */}
@@ -3075,6 +2992,21 @@ const LiveSession = () => {
           <Button onClick={submitFeedback} variant="contained" color="primary">
             Submit Feedback
           </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Dialog
+        open={descriptionDialog}
+        onClose={() => setDescriptionDialog(false)}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Session Description"}</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">{selectedDescription}</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setDescriptionDialog(false)}>Close</Button>
         </DialogActions>
       </Dialog>
     </div>
