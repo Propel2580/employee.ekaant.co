@@ -2514,7 +2514,7 @@ const LiveSession = () => {
         {showBookmarksOnly && ` (Bookmarked: ${bookmarkedSessions.length})`}
       </Typography>
 
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{ maxWidth: '1200px', margin: '0 auto' }}>
         {isLoading ? (
           Array.from(new Array(4)).map((_, index) => (
             <Grid item xs={12} md={6} key={`skeleton-${index}`}>
@@ -2551,19 +2551,25 @@ const LiveSession = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <Card>
-                    <CardContent>
+                  <Card sx={{ 
+                    height: 'auto', 
+                    display: 'flex', 
+                    flexDirection: 'column',
+                    maxWidth: '500px',
+                    margin: '0 auto',
+                    border: '1px solid #e0e0e0'
+                  }}>
+                    <CardContent sx={{ flex: 1, p: 3 }}>
                       <img
                         src={session.image}
                         alt={session.title}
                         style={{ 
                           width: "100%", 
-                          height: "auto",
-                          minHeight: "240px",
-                          maxHeight: "280px",
+                          height: "260px",
                           objectFit: "contain",
                           borderRadius: "8px",
-                          background: "#f5f5f5"
+                          background: "#f5f5f5",
+                          marginBottom: "16px"
                         }}
                       />
 
@@ -2968,7 +2974,23 @@ const LiveSession = () => {
                           </DialogActions>
                         </Dialog>
                       );
-                      ReactDOM.render(dialogContent, document.getElementById('dialog-root') || document.body);
+                      const dialogRoot = document.createElement('div');
+                      dialogRoot.id = 'session-dialog';
+                      document.body.appendChild(dialogRoot);
+                      const root = ReactDOM.createRoot(dialogRoot);
+                      root.render(dialogContent);
+                      
+                      // Cleanup when dialog closes
+                      const cleanup = () => {
+                        root.unmount();
+                        dialogRoot.remove();
+                      };
+                      
+                      // Add cleanup to the Dialog's onClose
+                      dialogContent.props.onClose = () => {
+                        cleanup();
+                        setOpenDialog(true);
+                      };
                     }
                   }}
                   sx={{

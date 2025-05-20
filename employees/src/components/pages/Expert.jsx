@@ -1975,11 +1975,11 @@ const SESSION_COST = 100;
                 className="bg-white rounded-xl shadow-md overflow-hidden transition-all hover:shadow-lg hover:translate-y-[-5px] duration-300 cursor-pointer"
                 onClick={() => setSelectedExpert(expert)}
               >
-                <div className="relative h-56 overflow-hidden flex items-center justify-center bg-gray-50">
+                <div className="relative h-64 overflow-hidden bg-gray-50">
                   <img 
                     src={expert.image} 
                     alt={expert.name} 
-                    className="h-full w-auto object-contain transform hover:scale-105 transition-transform duration-500" 
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500" 
                   />
                   <div className="absolute top-3 right-3 bg-white bg-opacity-90 text-indigo-600 px-2 py-1 rounded-lg flex items-center shadow-sm">
                     <svg className="h-4 w-4 text-yellow-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
