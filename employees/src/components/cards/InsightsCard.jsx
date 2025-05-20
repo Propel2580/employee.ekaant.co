@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const InsightsCard = () => {
   const [isSurveyOpen, setIsSurveyOpen] = useState(false);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(-1);
   const [answers, setAnswers] = useState(Array(10).fill({ selectedOption: "", customAnswer: "" }));
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [showReminder, setShowReminder] = useState(false);
@@ -226,11 +226,28 @@ const InsightsCard = () => {
 
             {!isSubmitted ? (
               <>
-                <Typography variant="h6" className="font-semibold text-lg mb-4">
-                  {questions[currentQuestion].question}
-                </Typography>
+                {currentQuestion === -1 ? (
+                  <div className="text-center">
+                    <Typography variant="h6" className="font-semibold text-xl mb-4">
+                      🌱 How's Your Well-Being Today?
+                    </Typography>
+                    <Typography variant="body1" className="text-gray-600 mb-6">
+                      Take 2 minutes to check in with yourself — we promise it won't feel like homework 😄
+                    </Typography>
+                    <button
+                      onClick={() => setCurrentQuestion(0)}
+                      className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all"
+                    >
+                      Begin Check-in
+                    </button>
+                  </div>
+                ) : (
+                  <Typography variant="h6" className="font-semibold text-lg mb-4">
+                    {questions[currentQuestion].question}
+                  </Typography>
+                )}
                 <div className="space-y-4">
-                  {questions[currentQuestion].options.map((option, index) => (
+                  {currentQuestion >= 0 && questions[currentQuestion].options.map((option, index) => (
                     <div key={index} className="flex items-center">
                       <input
                         type="radio"
@@ -244,13 +261,15 @@ const InsightsCard = () => {
                     </div>
                   ))}
                 </div>
-                <textarea
-                  value={answers[currentQuestion].customAnswer}
-                  onChange={handleCustomAnswerChange}
-                  className="w-full p-2 border rounded-lg mt-4"
-                  rows={4}
-                  placeholder="Additional comments (optional)..."
-                />
+                {currentQuestion >= 0 && (
+                  <textarea
+                    value={answers[currentQuestion].customAnswer}
+                    onChange={handleCustomAnswerChange}
+                    className="w-full p-2 border rounded-lg mt-4"
+                    rows={4}
+                    placeholder="Additional comments (optional)..."
+                  />
+                )}
                 <div className="flex justify-between mt-4">
                   <button
                     onClick={handlePreviousQuestion}
@@ -279,13 +298,16 @@ const InsightsCard = () => {
                 </div>
               </>
             ) : (
-              <div className="text-center">
-                <Typography variant="h6" className="font-semibold text-lg mb-4">
-                  Thank you for your valuable feedback!
+              <div className="text-center space-y-4">
+                <Typography variant="h6" className="font-semibold text-xl mb-2">
+                  ✅ Thanks for completing the check-in!
+                </Typography>
+                <Typography variant="body1" className="text-gray-600 mb-6">
+                  No matter where you are on this journey, remember it's okay to pause, reset, and reach out. And hey — laughter is self-care too! 😄
                 </Typography>
                 <button
                   onClick={handleCloseSurvey}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+                  className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all"
                 >
                   Close
                 </button>
