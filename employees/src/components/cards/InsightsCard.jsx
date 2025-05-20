@@ -261,13 +261,15 @@ const InsightsCard = () => {
                     </div>
                   ))}
                 </div>
-                <textarea
-                  value={answers[currentQuestion].customAnswer}
-                  onChange={handleCustomAnswerChange}
-                  className="w-full p-2 border rounded-lg mt-4"
-                  rows={4}
-                  placeholder="Additional comments (optional)..."
-                />
+                {currentQuestion >= 0 && (
+                  <textarea
+                    value={answers[currentQuestion].customAnswer}
+                    onChange={handleCustomAnswerChange}
+                    className="w-full p-2 border rounded-lg mt-4"
+                    rows={4}
+                    placeholder="Additional comments (optional)..."
+                  />
+                )}
                 <div className="flex justify-between mt-4">
                   <button
                     onClick={handlePreviousQuestion}
