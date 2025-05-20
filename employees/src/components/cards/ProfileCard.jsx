@@ -15,7 +15,7 @@ const ProfileCard = () => {
     "Everything you've ever wanted is on\nthe other side of fear",
     "Success usually comes to those who are\ntoo busy to be looking for it",
     "The only way to do great work is\nto love what you do",
-    "If you want to lift yourself up,\nlift up someone else", 
+    "If you want to lift yourself up,\nlift up someone else",
     "The journey of a thousand miles\nbegins with one step",
     "Don't watch the clock; do what it does.\nKeep going",
     "The only limit to our realization of tomorrow\nwill be our doubts of today",
