@@ -122,7 +122,7 @@ const ProfileCard = () => {
       <div className="flex space-x-11">
         <div className="relative">
           <img
-            src={profileData.avatar || "https://www.profilebakery.com/wp-content/uploads/2023/04/AI-Profile-Picture.jpg"}
+            src={profileData.avatar || "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740"}
             alt="Profile"
             className="w-40 h-40 rounded-full border-5 border-white shadow-lg object-cover"
           />

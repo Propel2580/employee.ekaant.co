@@ -7,25 +7,25 @@ const fetchUserSessions = async (userId) => {
   if (userId === 'user1') {
     return [
       {
-        id: 1,
+        id: 19,
         title: "Prevent Burnout",
         instructor: "Ipshita Kaur",
         duration: "60 min",
         credits: 200,
         levels: "8 levels - 1.15 hrs",
-        image: "https://tse2.mm.bing.net/th?id=OIP.bmU3BRn81rRvC6tyutJA3gHaGQ&pid=Api&P=0&h=180",
+        image: "https://dropinblog.net/34238038/files/featured/Blog_Covers__7_.png",
         details: "Expert in mindfulness and stress management.",
         ratings: "4.8/5",
         startTime: "2025-02-24T15:00:00",
       },
       {
-        id: 3, // Added a session unique to user1
+        id: 63, // Added a session unique to user1
         title: "Time Management",
         instructor: "Jane Doe",
         duration: "45 min",
         credits: 150,
         levels: "5 levels - 0.75 hrs",
-        image: "https://via.placeholder.com/150", // Placeholder image
+        image: "https://leapmax.ai/wp-content/uploads/2024/02/time-management-skills-.webp", // Placeholder image
         details: "Learn effective time management techniques.",
         ratings: "4.5/5",
         startTime: "2025-02-25T10:00:00",

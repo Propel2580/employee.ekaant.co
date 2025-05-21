@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
 const sendEmailNotification = async (to, subject, text, html = null) => {
   try {
     const mailOptions = {
-      from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
+      from: `"EKAANT TEAM" <${process.env.SMTP_USER}>`,
       to: to,
       subject: subject,
       text: text,

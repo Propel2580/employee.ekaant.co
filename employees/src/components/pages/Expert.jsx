@@ -16,28 +16,33 @@ const experts = [
     email: "mansi.91289@gmail.com",
     availability: [
       {
-        date: "2025-05-28",
+        date: "2025-05-22",
         slots: [
-          { start: "09:00", end: "09:45" },
-          { start: "10:00", end: "10:45" },
-          { start: "11:00", end: "11:45" },
-          { start: "12:00", end: "12:45" }
+         
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
         ]
       },
       {
-        date: "2025-04-29",
+        date: "2025-04-23",
         slots: [
-          { start: "14:00", end: "14:45" },
+          
           { start: "15:00", end: "15:45" },
-          { start: "16:00", end: "16:45" },
-          { start: "17:00", end: "17:45" }
+          { start: "16:00", end: "16:45" }
         ]
       },
       {
-        date: "2025-05-11",
+        date: "2025-05-26",
         slots: [
-          { start: "09:00", end: "09:45" },
-          { start: "10:00", end: "10:45" },
+          
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-05-27",
+        slots: [
+          
           { start: "11:00", end: "11:45" },
           { start: "14:00", end: "14:45" }
         ]
@@ -54,24 +59,38 @@ const experts = [
     overview: "Swati Sharma is a seasoned professional in social work and psychological wellness with more than 6+ years of experience. She has worked extensively in foster care, drug education, and individual, family, and couples counseling.  Her expertise includes crisis counseling for adolescents, psychological first aid, and addressing relationship challenges. Swati specializes in managing social anxiety, trauma, stress, anger, and emotional well-being. ",
     email: "mahira.khan@example.com",
     availability: [
-        {
-          date: "2025-05-16",
-          slots: [
-            { start: "09:00", end: "09:45" },
-            { start: "10:00", end: "10:45" },
-            { start: "11:00", end: "11:45" },
-            { start: "12:00", end: "12:45" }
-          ]
-        },
-        {
-          date: "2025-05-08",
-          slots: [
-            { start: "14:00", end: "14:45" },
-            { start: "15:00", end: "15:45" },
-            { start: "16:00", end: "16:45" },
-            { start: "17:00", end: "17:45" }
-          ]
-        }
+          {
+        date: "2025-05-22",
+        slots: [
+         
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-04-23",
+        slots: [
+          
+          { start: "15:00", end: "15:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-05-26",
+        slots: [
+          
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-05-27",
+        slots: [
+          
+          { start: "11:00", end: "11:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      }
       ]
   },
   { 
@@ -83,24 +102,38 @@ const experts = [
     overview: "With over a decade of experience in counseling psychologists, Ms. Vishwa Puranik specializes in evidence-based practices to enhance mental health and well-being. Her areas of expertise include family counseling, parenting support, adolescent therapy, women’s issues, mindfulness practices and many more. As a certified Yoga Teacher, her holistic approach fosters balance and resilience. With a compassionate and tailored style, she empowers clients to thrive in all aspects of life.",
     email: "joane.pier@example.com",
     availability: [
-        {
-          date: "2025-06-08",
-          slots: [
-            { start: "09:00", end: "09:45" },
-            { start: "10:00", end: "10:45" },
-            { start: "11:00", end: "11:45" },
-            { start: "12:00", end: "12:45" }
-          ]
-        },
-        {
-          date: "2025-06-09",
-          slots: [
-            { start: "14:00", end: "14:45" },
-            { start: "15:00", end: "15:45" },
-            { start: "16:00", end: "16:45" },
-            { start: "17:00", end: "17:45" }
-          ]
-        }
+          {
+        date: "2025-05-22",
+        slots: [
+         
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-04-23",
+        slots: [
+          
+          { start: "15:00", end: "15:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-05-26",
+        slots: [
+          
+          { start: "17:00", end: "17:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-05-27",
+        slots: [
+          
+          { start: "17:00", end: "17:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      }
       ]
   },
   { 
@@ -112,24 +145,38 @@ const experts = [
     overview: "Dr. Shweta Sharma is a licensed Clinical Psychologist with the Rehabilitation Council of India [A-24504] and has experience of more than 12 years in this field of mental health. Her expertise lies in Cognitive Behavior Therapy, Psychoanalysis, Marital therapy, Neuropsychological Problems and assessment, and Personality Assessment.",
     email: "amit.verma@example.com",
     availability: [
-        {
-          date: "2025-06-11",
-          slots: [
-            { start: "09:00", end: "09:45" },
-            { start: "10:00", end: "10:45" },
-            { start: "11:00", end: "11:45" },
-            { start: "12:00", end: "12:45" }
-          ]
-        },
-        {
-          date: "2025-06-12",
-          slots: [
-            { start: "14:00", end: "14:45" },
-            { start: "15:00", end: "15:45" },
-            { start: "16:00", end: "16:45" },
-            { start: "17:00", end: "17:45" }
-          ]
-        }
+         {
+        date: "2025-05-22",
+        slots: [
+         
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-04-23",
+        slots: [
+          
+          { start: "15:00", end: "15:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-05-27",
+        slots: [
+          
+          { start: "13:00", end: "13:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-28",
+        slots: [
+          
+          { start: "12:00", end: "12:45" },
+          { start: "18:00", end: "18:45" }
+        ]
+      }
       ]
   }
 ];

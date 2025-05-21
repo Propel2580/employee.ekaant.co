@@ -18,7 +18,7 @@ const Challenge = () => {
       title: '45 Days of Stress Release',
       dateRange: '10 May - 24 May, 2024',
       credits: 50,
-      image: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      image: 'https://www.shutterstock.com/image-vector/multitasking-time-management-concept-business-260nw-2177152775.jpg',
       status: 'Active',
     },
     {
@@ -26,33 +26,18 @@ const Challenge = () => {
       title: 'Dopamine Triggers and Avoidance',
       dateRange: '15 May - 29 May, 2024',
       credits: 50,
-      image: 'https://images.unsplash.com/photo-1606041008023-472dfb5b530f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+      image: 'https://t4.ftcdn.net/jpg/04/91/77/87/360_F_491778733_Qt8W4SiDrYGY80dHggmWKVPkeAcBELgu.jpg',
       status: 'Active',
     },
     {
       id: 12,
-      title: 'Women for Inclusive Workplaces',
+      title: 'Inclusive Workplaces',
       dateRange: '10 May - 24 May, 2024',
       credits: 50,
       image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
       status: 'Active',
     },
-    {
-      id: 15,
-      title: 'Women  Workplaces',
-      dateRange: '10 May - 24 May, 2024',
-      credits: 50,
-      image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      status: 'Active',
-    },
-    {
-      id: 13,
-      title: 'Women for Inclusive ',
-      dateRange: '10 May - 29May, 2024',
-      credits: 50,
-      image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-      status: 'Active',
-    },
+   
     // Add other challenges here...
   ];
 

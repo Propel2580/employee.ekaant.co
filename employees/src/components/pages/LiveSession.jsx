@@ -169,7 +169,7 @@ const LiveSession = () => {
         topics: ["clam", "clarity", "Mindfullness"],
         expert: {
           name: "Ms.Swati Sharma",
-          photo: "/doc1.png",
+          photo: "/doc2.png",
           specialization: "Expert in Mindfulness Quality",
           rating: 4.9,
           sessions: 480,
@@ -204,7 +204,7 @@ const LiveSession = () => {
       topics: ["Meditation", "Mindfulness", "overthinking"],
        expert: {
         name: "Ms.Vishwa Puranik",
-        photo: "/doc1.png",
+        photo: "/doc3.png",
         specialization: "Science of Sleep",
         rating: 4.9,
         sessions: 650,
@@ -237,7 +237,7 @@ const LiveSession = () => {
       topics: ["Breathwork", "Mindfulness Techniques", "Gentle Postures"],
       expert: {
         name: "Dr. Shweta Sharma",
-        photo: "/doc1.png",
+        photo: "/doc4.png",
         specialization: "yoga and mental wellness",
         rating: 4.7,
         sessions: 320,
@@ -246,7 +246,6 @@ const LiveSession = () => {
           {
             date: "2024-05-26",
             slots: [
-              { start: "10:00 AM", end: "11:00 AM" },
               { start: "1:00 PM", end: "2:00 PM" },
               { start: "4:00 PM", end: "5:00 PM" },
             ],
