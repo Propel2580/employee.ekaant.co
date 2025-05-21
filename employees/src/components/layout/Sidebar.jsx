@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Users as Team, MedalIcon, TrophyIcon, SheetIcon, CircleDashed, BarChart4Icon, LogOut, Lock } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -145,8 +146,8 @@ const Sidebar = () => {
         />
       ))}
 
-           <div className="flex items-center justify-center mb-8 pt-6">
-        <img src="\ekaant.png" alt="Ekaant Logo" className="h-16 w-auto object-contain" />
+           <div className="flex items-center justify-center gap-2 mb-6 py-4">
+        <img src="\ekaant.png" alt="Ekaant Logo" className="h-15 w-20" />
       </div>
       <div className="flex-2 bg-black/30 backdrop-blur-sm p-4 rounded-tr-[40px] rounded-tl-[40px] mt-6 py-4 px-4">
         <nav>
