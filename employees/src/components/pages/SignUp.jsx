@@ -257,9 +257,9 @@ const Signup = () => {
       {/* Right Section - Sign Up Form */}
       <div className="w-1/2 p-12 flex flex-col justify-center items-center">
         <div className="w-full max-w-md">
-          <div className="flex  space-x-4 mb-12">
-            <img src="/masterlogo.png" alt="Master Logo" className="h-16" />
-            <img src="/tatrlogo.png" alt="Tatr Logo" className="h-20" />
+          <div className="flex items-center justify-center space-x-4 mb-12">
+            <img src="/masterlogo.png" alt="Master Logo" className="h-30" />
+            <img src="/tatrlogo.png" alt="Tatr Logo" className="h-18" />
           </div>
 
           <div className="flex mb-8">
@@ -403,7 +403,7 @@ const Signup = () => {
                     inputStyle={{
                       width: '100%',
                       height: '48px',
-                      padding: '0.75rem 0.75rem 0.75rem 3.5rem',
+                      padding: '0.75rem 0.8rem 0.75rem 3.5rem',
                       borderRadius: '0.5rem',
                       border: '1px solid #e5e7eb',
                       backgroundColor: '#f9fafb',
@@ -412,7 +412,7 @@ const Signup = () => {
                     buttonStyle={{
                       border: 'none',
                       backgroundColor: 'transparent',
-                      padding: '0.75rem',
+                      padding: '0.5rem',
                       borderRight: '1px solid #e5e7eb'
                     }}
                     dropdownStyle={{

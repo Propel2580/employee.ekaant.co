@@ -212,9 +212,9 @@ const ForgotPassword = () => {
       {/* Right Section */}
       <div className="w-1/2 p-12 flex flex-col justify-center items-center">
         <div className="w-full max-w-md">
-          <div className="flex space-x-4 mb-12">
-            <img src="/masterlogo.png" alt="Master Logo" className="h-16" />
-            <img src="/tatrlogo.png" alt="Tatr Logo" className="h-20" />
+          <div className="flex items-center justify-center space-x-4 mb-12">
+            <img src="/masterlogo.png" alt="Master Logo" className="h-30" />
+            <img src="/tatrlogo.png" alt="Tatr Logo" className="h-18" />
           </div>
 
           <div className="bg-white/40 backdrop-blur-md p-8 rounded-xl border border-white/20 shadow-lg">

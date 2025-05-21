@@ -244,13 +244,7 @@ const InsightsCard = () => {
                     </div>
                   ))}
                 </div>
-                <textarea
-                  value={answers[currentQuestion].customAnswer}
-                  onChange={handleCustomAnswerChange}
-                  className="w-full p-2 border rounded-lg mt-4"
-                  rows={4}
-                  placeholder="Additional comments (optional)..."
-                />
+              
                 <div className="flex justify-between mt-4">
                   <button
                     onClick={handlePreviousQuestion}
@@ -281,11 +275,14 @@ const InsightsCard = () => {
             ) : (
               <div className="text-center">
                 <Typography variant="h6" className="font-semibold text-lg mb-4">
-                  Thank you for your valuable feedback!
+                  ✅ Thanks for completing the check-in! 
+                  <p className="mt-4 text-gray-600 text-sm">
+                    No matter where you are on this journey, remember it's okay to pause, reset, and reach out. And hey — laughter is self-care too! 😄
+                  </p>
                 </Typography>
                 <button
                   onClick={handleCloseSurvey}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+                  className="bg-blue-600 text-white px-4 py-2 rounded-lg mt-4"
                 >
                   Close
                 </button>
