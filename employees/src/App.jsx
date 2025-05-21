@@ -186,7 +186,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route path="/sign-in" element={<SignIn setAuthenticated={setAuthenticated} />} />
         <Route path="/sign-up" element={<SignUp />} />
 
