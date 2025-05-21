@@ -69,7 +69,7 @@ export const signup = async (req, res) => {
 
     try {
       const mailOptions = {
-        from: `"The Ekaant Team" <${process.env.COMPANY_EMAIL}>`,
+        from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
         to: email,
         subject: "Welcome to EKAANT - Verify Your Email",
         html: `
@@ -162,7 +162,7 @@ export const setPassword = async (req, res) => {
 
     // Send welcome email
     const welcomeMailOptions = {
-      from: `"The Ekaant Team" <${process.env.COMPANY_EMAIL}>`,
+      from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
       to: email,
       subject: "A Warm Welcome from Ekaant 💙",
       html: `
@@ -556,7 +556,7 @@ export const sendOtpForReset = async (req, res) => {
 
     // ✅ Email Content
     const mailOptions = {
-      from: `"The Ekaant Team" <${process.env.COMPANY_EMAIL}>`,
+      from: `"EKAANT TEAM" <${process.env.COMPANY_EMAIL}>`,
       to: email,
       subject: "Reset Your Password - OTP Code",
       text: `Your OTP for password reset is ${otp}. It is valid for 10 minutes.`,
