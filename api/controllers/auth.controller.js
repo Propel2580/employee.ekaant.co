@@ -10,22 +10,16 @@ import Session from "../models/Session.model.js";
 //new comment
 dotenv.config();
 
-// Configure Nodemailer with retries
-const createTransporter = () => {
-  return nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: process.env.COMPANY_EMAIL,
-      pass: process.env.COMPANY_EMAIL_PASSWORD,
-    },
-    maxConnections: 5,
-    maxMessages: 10,
-    pool: true,
-    rateDelta: 1000,
-    rateLimit: 5,
-  });
-};
-const transporter = createTransporter();
+// Configure Nodemailer with SMTP settings
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: process.env.SMTP_SECURE === "true",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 const generateOTP = () => Math.floor(100000 + Math.random() * 900000).toString();
 
@@ -551,10 +545,12 @@ export const sendOtpForReset = async (req, res) => {
 
     // ✅ Configure Nodemailer
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: process.env.SMTP_SECURE === "true",
       auth: {
-        user: process.env.COMPANY_EMAIL, // Sender email
-        pass: process.env.COMPANY_EMAIL_PASSWORD, // App Password
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
       },
     });
 
@@ -708,7 +704,6 @@ export const updateCredits = async (req, res) => {
     if (!updatedEmployee) {
       return res.status(404).json({ success: false, message: "Employee not found" });
     }
-
     if (updatedEmployee.credits < 0) {
       // Rollback if credits would go negative
       await Employee.findOneAndUpdate(
