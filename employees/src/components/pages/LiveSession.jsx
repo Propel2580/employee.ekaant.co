@@ -140,7 +140,7 @@ const LiveSession = () => {
         specialization: "Expert in stress and Anxiety",
         rating: 4.8,
         sessions: 520,
-        mail: "mansi.91289@gmail.com",
+        mail: "ekaant.co@gmail.com",
         availability: [
           {
             date: "2025-06-01",
@@ -173,7 +173,7 @@ const LiveSession = () => {
           specialization: "Expert in Mindfulness Quality",
           rating: 4.9,
           sessions: 480,
-          mail: "mansi.91289@gmail.com",
+          mail: "ekaant.co@gmail.com",
           availability: [
             {
               date: "2025-06-03",
@@ -208,7 +208,7 @@ const LiveSession = () => {
         specialization: "Science of Sleep",
         rating: 4.9,
         sessions: 650,
-        mail: "mansi.91289@gmail.com",
+        mail: "ekaant.co@gmail.com",
         availability: [
           {
             date: "2025-06-05",
@@ -241,7 +241,7 @@ const LiveSession = () => {
         specialization: "yoga and mental wellness",
         rating: 4.7,
         sessions: 320,
-        mail: "ajayguptap8210p@gmail.com",
+        mail: "ekaant.co@gmail.com",
         availability: [
           {
             date: "2024-05-26",

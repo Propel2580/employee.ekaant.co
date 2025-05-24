@@ -13,7 +13,7 @@ const experts = [
     rating: 4.5,
     levels: 10,
     overview: "Saumya is a Clinical Psychologist with over 8+ years of experience. Her areas of expertise include depression, anxiety, self-esteem issues, emotional exhaustion, stress, adjustment issues, interpersonal relationship concerns, social anxiety, self-confidence concerns, and panic attacks.",
-    email: "mansi.91289@gmail.com",
+    email: "ekaant.co@gmail.com",
     availability: [
       {
         date: "2025-05-22",
@@ -57,7 +57,7 @@ const experts = [
     rating: 4.3,
     levels: 8,
     overview: "Swati Sharma is a seasoned professional in social work and psychological wellness with more than 6+ years of experience. She has worked extensively in foster care, drug education, and individual, family, and couples counseling.  Her expertise includes crisis counseling for adolescents, psychological first aid, and addressing relationship challenges. Swati specializes in managing social anxiety, trauma, stress, anger, and emotional well-being. ",
-    email: "mahira.khan@example.com",
+    email: "ekaant.co@gmail.com",
     availability: [
           {
         date: "2025-05-22",
@@ -100,7 +100,7 @@ const experts = [
     rating: 4.7,
     levels: 12,
     overview: "With over a decade of experience in counseling psychologists, Ms. Vishwa Puranik specializes in evidence-based practices to enhance mental health and well-being. Her areas of expertise include family counseling, parenting support, adolescent therapy, women’s issues, mindfulness practices and many more. As a certified Yoga Teacher, her holistic approach fosters balance and resilience. With a compassionate and tailored style, she empowers clients to thrive in all aspects of life.",
-    email: "joane.pier@example.com",
+    email: "ekaant.co@gmail.com",
     availability: [
           {
         date: "2025-05-22",
@@ -143,7 +143,7 @@ const experts = [
     rating: 4.6,
     levels: 9,
     overview: "Dr. Shweta Sharma is a licensed Clinical Psychologist with the Rehabilitation Council of India [A-24504] and has experience of more than 12 years in this field of mental health. Her expertise lies in Cognitive Behavior Therapy, Psychoanalysis, Marital therapy, Neuropsychological Problems and assessment, and Personality Assessment.",
-    email: "amit.verma@example.com",
+    email: "ekaant.co@gmail.com",
     availability: [
          {
         date: "2025-05-22",
