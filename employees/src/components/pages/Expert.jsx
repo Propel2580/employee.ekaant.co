@@ -16,35 +16,39 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
       {
-        date: "2025-05-22",
-        slots: [
-         
-          { start: "13:00", end: "13:45" },
-          { start: "14:00", end: "14:45" }
-        ]
-      },
-      {
-        date: "2025-04-23",
-        slots: [
-          
-          { start: "15:00", end: "15:45" },
-          { start: "16:00", end: "16:45" }
-        ]
-      },
-      {
-        date: "2025-05-26",
-        slots: [
-          
-          { start: "13:00", end: "13:45" },
-          { start: "14:00", end: "14:45" }
-        ]
-      },
-      {
         date: "2025-05-27",
         slots: [
+         
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-28",
+        slots: [
+
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-29",
+        slots: [
           
-          { start: "11:00", end: "11:45" },
-          { start: "14:00", end: "14:45" }
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-30",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
         ]
       }
     ]
@@ -60,35 +64,48 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
           {
-        date: "2025-05-22",
+        date: "2025-05-27",
         slots: [
          
-          { start: "13:00", end: "13:45" },
+          { start: "10:00", end: "10:45" },
+          { start: "12:00", end: "12:45" },
           { start: "14:00", end: "14:45" }
         ]
       },
       {
-        date: "2025-04-23",
+        date: "2025-04-28",
         slots: [
           
-          { start: "15:00", end: "15:45" },
+          { start: "10:00", end: "10:45" },
+          { start: "12:00", end: "12:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-05-29",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
           { start: "16:00", end: "16:45" }
         ]
       },
       {
-        date: "2025-05-26",
+        date: "2025-05-30",
         slots: [
           
-          { start: "13:00", end: "13:45" },
-          { start: "14:00", end: "14:45" }
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
         ]
       },
       {
-        date: "2025-05-27",
+        date: "2025-05-31",
         slots: [
           
-          { start: "11:00", end: "11:45" },
-          { start: "14:00", end: "14:45" }
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
         ]
       }
       ]
@@ -103,7 +120,7 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
           {
-        date: "2025-05-22",
+        date: "2025-05-27",
         slots: [
          
           { start: "13:00", end: "13:45" },
@@ -111,7 +128,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-23",
+        date: "2025-04-28",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -119,7 +136,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-26",
+        date: "2025-05-29",
         slots: [
           
           { start: "17:00", end: "17:45" },
@@ -127,7 +144,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-27",
+        date: "2025-05-30",
         slots: [
           
           { start: "17:00", end: "17:45" },
@@ -146,7 +163,7 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
          {
-        date: "2025-05-22",
+        date: "2025-05-27",
         slots: [
          
           { start: "13:00", end: "13:45" },
@@ -154,7 +171,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-23",
+        date: "2025-04-28",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -162,7 +179,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-27",
+        date: "2025-05-29",
         slots: [
           
           { start: "13:00", end: "13:45" },
@@ -170,7 +187,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-28",
+        date: "2025-05-30",
         slots: [
           
           { start: "12:00", end: "12:45" },
@@ -189,35 +206,35 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
          {
-        date: "2025-05-22",
-        slots: [
-         
-          { start: "13:00", end: "13:45" },
-          { start: "14:00", end: "14:45" }
-        ]
-      },
-      {
-        date: "2025-04-23",
-        slots: [
-          
-          { start: "15:00", end: "15:45" },
-          { start: "16:00", end: "16:45" }
-        ]
-      },
-      {
         date: "2025-05-27",
         slots: [
-          
-          { start: "13:00", end: "13:45" },
+         
+          { start: "14:00", end: "14:45" },
           { start: "15:00", end: "15:45" }
         ]
       },
       {
-        date: "2025-05-28",
+        date: "2025-04-28",
         slots: [
           
-          { start: "12:00", end: "12:45" },
-          { start: "18:00", end: "18:45" }
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-29",
+        slots: [
+          
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-30",
+        slots: [
+          
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
         ]
       }
       ]
