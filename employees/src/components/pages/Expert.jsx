@@ -178,6 +178,49 @@ const experts = [
         ]
       }
       ]
+  },
+  { 
+    image: "/doc5.png", 
+    name: "Ms.Diksha Joshi", 
+    specialization: "Counselling Psychologist", 
+    rating: 4.6,
+    levels: 9,
+    overview: "Diksha Joshi is a dedicated Counselling Psychologist with 3+ years of experience in supporting individuals through anxiety, depression, relationship challenges, and personal growth. Her approach is rooted in empathy and evidence-based techniques, tailored to meet each client's unique emotional needs. Diksha creates a safe, non-judgmental space where healing, self-discovery, and personal transformation can truly begin.",
+    email: "ekaant.co@gmail.com",
+    availability: [
+         {
+        date: "2025-05-22",
+        slots: [
+         
+          { start: "13:00", end: "13:45" },
+          { start: "14:00", end: "14:45" }
+        ]
+      },
+      {
+        date: "2025-04-23",
+        slots: [
+          
+          { start: "15:00", end: "15:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-05-27",
+        slots: [
+          
+          { start: "13:00", end: "13:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-28",
+        slots: [
+          
+          { start: "12:00", end: "12:45" },
+          { start: "18:00", end: "18:45" }
+        ]
+      }
+      ]
   }
 ];
 
