@@ -46,6 +46,10 @@ const SignIn = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleTogglePassword = () => {
+    setFormData((prev) => ({ ...prev, showPassword: !prev.showPassword }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -158,7 +162,6 @@ const SignIn = () => {
             <div>
               <div className="flex justify-between items-center mb-2">
                 <label className="block text-sm font-medium text-gray-700">Email</label>
-
               </div>
               <input
                 type="email"
@@ -176,14 +179,35 @@ const SignIn = () => {
                   Forgot Password?
                 </Link>
               </div>
-              <input
-                type={formData.showPassword ? "text" : "password"}
-                name="password"
-                placeholder="••••••••"
-                onChange={handleChange}
-                className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
-                required
-              />
+              <div className="relative">
+                <input
+                  type={formData.showPassword ? "text" : "password"}
+                  name="password"
+                  placeholder="••••••••"
+                  onChange={handleChange}
+                  className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50"
+                  required
+                />
+                <button
+                  type="button"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+                  onClick={handleTogglePassword}
+                  tabIndex={-1}
+                  aria-label={formData.showPassword ? "Hide password" : "Show password"}
+                >
+                  {formData.showPassword ? (
+                    // Eye-off SVG
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-5.523 0-10-4.477-10-10 0-1.657.336-3.236.938-4.675M15 12a3 3 0 11-6 0 3 3 0 016 0zm6.062-4.675A9.956 9.956 0 0122 9c0 5.523-4.477 10-10 10a9.956 9.956 0 01-4.675-.938M3 3l18 18" />
+                    </svg>
+                  ) : (
+                    // Eye SVG
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm7 0c0 5-4 9-10 9S2 17 2 12s4-9 10-9 10 4 10 9z" />
+                    </svg>
+                  )}
+                </button>
+              </div>
             </div>
             <button
               type="submit"
