@@ -16,25 +16,7 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
       {
-        date: "2025-05-27",
-        slots: [
-         
-          { start: "10:00", end: "10:45" },
-          { start: "14:00", end: "14:45" },
-          { start: "15:00", end: "15:45" }
-        ]
-      },
-      {
-        date: "2025-05-28",
-        slots: [
-
-          { start: "10:00", end: "10:45" },
-          { start: "14:00", end: "14:45" },
-          { start: "15:00", end: "15:45" }
-        ]
-      },
-      {
-        date: "2025-05-29",
+        date: "2025-06-02",
         slots: [
           
           { start: "10:00", end: "10:45" },
@@ -43,7 +25,43 @@ const experts = [
         ]
       },
       {
-        date: "2025-05-30",
+        date: "2025-06-03",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-06-04",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-06-05",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-06-06",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-07",
         slots: [
           
           { start: "10:00", end: "10:45" },
@@ -63,33 +81,6 @@ const experts = [
     overview: "Swati Sharma is a seasoned professional in social work and psychological wellness with more than 6+ years of experience. She has worked extensively in foster care, drug education, and individual, family, and couples counseling.  Her expertise includes crisis counseling for adolescents, psychological first aid, and addressing relationship challenges. Swati specializes in managing social anxiety, trauma, stress, anger, and emotional well-being. ",
     email: "ekaant.co@gmail.com",
     availability: [
-          {
-        date: "2025-05-27",
-        slots: [
-         
-          { start: "10:00", end: "10:45" },
-          { start: "12:00", end: "12:45" },
-          { start: "14:00", end: "14:45" }
-        ]
-      },
-      {
-        date: "2025-04-28",
-        slots: [
-          
-          { start: "10:00", end: "10:45" },
-          { start: "12:00", end: "12:45" },
-          { start: "14:00", end: "14:45" }
-        ]
-      },
-      {
-        date: "2025-05-29",
-        slots: [
-          
-          { start: "10:00", end: "10:45" },
-          { start: "14:00", end: "14:45" },
-          { start: "16:00", end: "16:45" }
-        ]
-      },
       {
         date: "2025-05-30",
         slots: [
@@ -101,6 +92,60 @@ const experts = [
       },
       {
         date: "2025-05-31",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-06-01",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-06-02",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-06-03",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-06-04",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-06-05",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "16:00", end: "16:45" }
+        ]
+      },
+      {
+        date: "2025-06-06",
         slots: [
           
           { start: "10:00", end: "10:45" },
@@ -128,7 +173,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-28",
+        date: "2025-05-28",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -171,7 +216,7 @@ const experts = [
         ]
       },
       {
-        date: "2025-04-28",
+        date: "2025-05-28",
         slots: [
           
           { start: "15:00", end: "15:45" },
@@ -206,35 +251,67 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
          {
-        date: "2025-05-27",
-        slots: [
-         
-          { start: "14:00", end: "14:45" },
-          { start: "15:00", end: "15:45" }
-        ]
-      },
-      {
-        date: "2025-04-28",
-        slots: [
-          
-          { start: "14:00", end: "14:45" },
-          { start: "15:00", end: "15:45" }
-        ]
-      },
-      {
-        date: "2025-05-29",
-        slots: [
-          
-          { start: "14:00", end: "14:45" },
-          { start: "15:00", end: "15:45" }
-        ]
-      },
-      {
         date: "2025-05-30",
         slots: [
+         
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-05-31",
+        slots: [
           
-          { start: "14:00", end: "14:45" },
-          { start: "15:00", end: "15:45" }
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-06-01",
+        slots: [
+          
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-06-02",
+        slots: [
+          
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-06-03",
+        slots: [
+          
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-06-04",
+        slots: [
+          
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-06-05",
+        slots: [
+          
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
+        ]
+      },
+      {
+        date: "2025-06-06",
+        slots: [
+          
+          { start: "08:00", end: "08:45" },
+          { start: "08:45", end: "09:30" }
         ]
       }
       ]
