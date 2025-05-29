@@ -357,6 +357,8 @@ const Signup = () => {
       <option value="Product Management">Product Management</option>
       <option value="Design">Design</option>
       <option value="Marketing">Marketing</option>
+      <option value="PGP">PGP</option>
+      <option value="UGP">UGP</option>
       <option value="Sales">Sales</option>
       <option value="Human Resources">Human Resources</option>
       <option value="Finance">Finance</option>
