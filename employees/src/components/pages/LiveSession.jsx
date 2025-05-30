@@ -166,7 +166,7 @@ const LiveSession = () => {
         image: "/image2.png",
         fullDescription: "Ever find your mind racing even while you're sitting still at your desk? You're not alone. In this session, psychologist Swati Sharma will guide you through the practice of mindfulness at work — a science-backed approach to staying present, focused, and calm even during the busiest hours. Through simple exercises and relatable examples, you'll learn how to manage distractions, respond (not react) to pressure, build emotional clarity, and reconnect with your goals — without the burnout. This is not about sitting in silence — it's about learning to thrive in chaos by grounding yourself in the present moment.",
         description: "Expert guidance on managing daily stress and improving mental health.",
-        topics: ["clam", "clarity", "Mindfullness"],
+        topics: ["calm", "clarity", "Mindfullness"],
         expert: {
           name: "Ms.Swati Sharma",
           photo: "/doc2.png",
