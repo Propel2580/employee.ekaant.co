@@ -16,6 +16,24 @@ const experts = [
     email: "ekaant.co@gmail.com",
     availability: [
       {
+        date: "2025-05-30",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
+        date: "2025-05-31",
+        slots: [
+          
+          { start: "10:00", end: "10:45" },
+          { start: "14:00", end: "14:45" },
+          { start: "15:00", end: "15:45" }
+        ]
+      },
+      {
         date: "2025-06-02",
         slots: [
           
@@ -182,14 +200,6 @@ const experts = [
       },
       {
         date: "2025-05-29",
-        slots: [
-          
-          { start: "17:00", end: "17:45" },
-          { start: "14:00", end: "14:45" }
-        ]
-      },
-      {
-        date: "2025-05-30",
         slots: [
           
           { start: "17:00", end: "17:45" },
