@@ -126,66 +126,100 @@ const Signup = () => {
     }
   };
 
-  const handleVerifyOTP = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      const response = await axios.post("https://employee.ekaant.co/api/verify-otp", {
+ const handleSendOTP = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  try {
+    await axios.post(
+      "https://employee.ekaant.co/api/auth/sign-up",
+      formData,
+      { withCredentials: true }
+    );
+    setOtpSent(true);
+    setTimeout(() => setOtpSent(false), 3000);
+    setStep(2);
+  } catch (err) {
+    console.error("OTP Send Error:", err);
+    setError(err.response?.data?.message || "Error sending OTP!");
+  } finally {
+    setLoading(false);
+  }
+};
+
+const handleVerifyOTP = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  try {
+    const response = await axios.post(
+      "https://employee.ekaant.co/api/auth/verify-otp",
+      {
         email: formData.email,
         otp: formData.otp,
-      });
+      },
+      { withCredentials: true }
+    );
 
-      setOtpVerified(true);
-      const successDiv = document.createElement('div');
-      successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-      successDiv.textContent = 'OTP verified successfully';
+    setOtpVerified(true);
+    const successDiv = document.createElement("div");
+    successDiv.className =
+      "fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50";
+    successDiv.textContent = "OTP verified successfully";
+    document.body.appendChild(successDiv);
+
+    setTimeout(() => {
+      successDiv.remove();
+      setStep(3);
+    }, 2000);
+  } catch (err) {
+    console.error("OTP Verify Error:", err);
+    setError(err.response?.data?.message || "Invalid OTP!");
+  } finally {
+    setLoading(false);
+  }
+};
+
+const handleSetPassword = async (e) => {
+  e.preventDefault();
+  if (formData.password !== formData.confirmPassword) {
+    setError("Passwords do not match!");
+    return;
+  }
+
+  setLoading(true);
+  try {
+    const res = await axios.post(
+      "https://employee.ekaant.co/api/auth/set-password",
+      {
+        email: formData.email,
+        password: formData.password,
+      },
+      { withCredentials: true }
+    );
+
+    if (res.data.message === "Password set successfully!") {
+      const successDiv = document.createElement("div");
+      successDiv.className =
+        "fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50";
+      successDiv.textContent = "Password set successfully";
       document.body.appendChild(successDiv);
 
       setTimeout(() => {
         successDiv.remove();
-        setStep(3);
+        navigate("/sign-in");
       }, 2000);
-    } catch (err) {
-      setError(err.response?.data?.message || "Invalid OTP!");
-    } finally {
-      setLoading(false);
+    } else {
+      throw new Error(res.data.message || "Failed to set password");
     }
-  };
+  } catch (err) {
+    console.error("Password setting error:", err);
+    setError(
+      err.response?.data?.message || err.message || "Failed to set password!"
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
-  const handleSetPassword = async (e) => {
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match!");
-      return;
-    }
-    setLoading(true);
-    try {
-      const res = await axios.post("https://employee.ekaant.co/api/set-password", {
-        email: formData.email,
-        password: formData.password
-      });
-
-      // Check message in response since backend returns success in message
-      if (res.data.message === "Password set successfully!") {
-        const successDiv = document.createElement('div');
-        successDiv.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
-        successDiv.textContent = 'Password set successfully';
-        document.body.appendChild(successDiv);
-
-        setTimeout(() => {
-          successDiv.remove();
-          navigate("/sign-in");
-        }, 2000);
-      } else {
-        throw new Error(res.data.message || "Failed to set password");
-      }
-    } catch (err) {
-      console.error("Password setting error:", err);
-      setError(err.response?.data?.message || err.message || "Failed to set password!");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <div className="min-h-screen flex">
