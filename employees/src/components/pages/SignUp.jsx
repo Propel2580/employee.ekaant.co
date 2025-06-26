@@ -111,20 +111,6 @@ const Signup = () => {
     setError("");
   };
 
-  const handleSendOTP = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await axios.post("https://employee.ekaant.co/api/sign-up", formData);
-      setOtpSent(true);
-      setTimeout(() => setOtpSent(false), 3000);
-      setStep(2);
-    } catch (err) {
-      setError(err.response?.data?.message || "Error sending OTP!");
-    } finally {
-      setLoading(false);
-    }
-  };
 
  const handleSendOTP = async (e) => {
   e.preventDefault();
